@@ -50,7 +50,7 @@ function Cart() {
     cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
   const saveOrder = async (status) => {
-    const res = await axios.post("http://localhost:5000/api/orders", {
+    const res = await axios.post("https://kitchenpro-backend.onrender.com/api/orders", {
       items: cart,
       total: total(),
       address,
@@ -72,7 +72,7 @@ function Cart() {
 
   const handleOnlinePayment = async () => {
     const { data } = await axios.post(
-      "http://localhost:5000/api/payment/create-order",
+      "https://kitchenpro-backend.onrender.com/api/payment/create-order",
       { amount: total() }
     );
 

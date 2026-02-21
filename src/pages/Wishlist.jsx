@@ -31,7 +31,7 @@ function Wishlist() {
             {wishlist.map((p) => (
               <div key={p._id} className="bg-white p-4 shadow rounded">
                 <img
-                  src={`http://localhost:5000${p.image}`}
+                  src={`https://kitchenpro-backend.onrender.com${p.image}`}
                   className="h-40 w-full object-cover rounded"
                 />
 

@@ -19,7 +19,7 @@ function AdminProducts() {
 
   // Fetch products
   const fetchProducts = async () => {
-    const res = await axios.get("http://localhost:5000/api/products");
+    const res = await axios.get("https://kitchenpro-backend.onrender.com/api/products");
     setProducts(res.data);
   };
 
@@ -41,12 +41,12 @@ function AdminProducts() {
     try {
       if (editingId) {
         await axios.put(
-          `http://localhost:5000/api/products/${editingId}`,
+          `https://kitchenpro-backend.onrender.com/api/products/${editingId}`,
           formData
         );
       } else {
         await axios.post(
-          "http://localhost:5000/api/products",
+          "https://kitchenpro-backend.onrender.com/api/products",
           formData
         );
       }
@@ -76,7 +76,7 @@ function AdminProducts() {
   const handleDelete = async (id) => {
     if (window.confirm("Delete this product?")) {
       await axios.delete(
-        `http://localhost:5000/api/products/${id}`
+        `https://kitchenpro-backend.onrender.com/api/products/${id}`
       );
       fetchProducts();
     }
@@ -241,7 +241,7 @@ function AdminProducts() {
 
               {product.image && (
                 <img
-                  src={`http://localhost:5000${product.image}`}
+                  src={`https://kitchenpro-backend.onrender.com${product.image}`}
                   alt=""
                   className="h-24 mt-3 object-cover"
                 />

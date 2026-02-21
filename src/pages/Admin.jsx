@@ -11,8 +11,8 @@ function Admin() {
   }, []);
 
   const fetchData = async () => {
-    const orderRes = await axios.get("http://localhost:5000/api/orders");
-    const productRes = await axios.get("http://localhost:5000/api/products");
+    const orderRes = await axios.get("https://kitchenpro-backend.onrender.com/api/orders");
+    const productRes = await axios.get("https://kitchenpro-backend.onrender.com/api/products");
 
     setOrders(orderRes.data);
     setProducts(productRes.data);

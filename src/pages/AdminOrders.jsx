@@ -6,7 +6,7 @@ function AdminOrders() {
   const [orders, setOrders] = useState([]);
 
   const fetchOrders = async () => {
-    const res = await axios.get("http://localhost:5000/api/orders");
+    const res = await axios.get("https://kitchenpro-backend.onrender.com/api/orders");
     setOrders(res.data);
   };
 
@@ -15,7 +15,7 @@ function AdminOrders() {
   }, []);
 
   const updateStatus = async (id, status) => {
-    await axios.patch(`http://localhost:5000/api/orders/${id}`, {
+    await axios.patch(`https://kitchenpro-backend.onrender.com/api/orders/${id}`, {
       status,
     });
     fetchOrders();

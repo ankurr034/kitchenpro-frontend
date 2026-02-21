@@ -25,7 +25,7 @@ function Home() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/products")
+      .get("https://kitchenpro-backend.onrender.com/api/products")
       .then((res) => setProducts(res.data))
       .catch((err) => console.log(err));
   }, []);
@@ -93,7 +93,7 @@ function Home() {
               >
                 {product.image && (
                   <img
-                    src={`http://localhost:5000${product.image}`}
+                    src={`https://kitchenpro-backend.onrender.com${product.image}`}
                     alt={product.name}
                     className="w-full h-48 object-cover rounded-lg mb-4"
                   />
