@@ -1,6 +1,33 @@
+<<<<<<< HEAD
 node_modules/
 .env
 client/node_modules/
 server/node_modules/
 client/dist/
 server/uploads/
+=======
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+>>>>>>> b6790bc1d6261c010609b37ca0f801714d2f8455
